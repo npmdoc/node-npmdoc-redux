@@ -1,6 +1,6 @@
 # npmdoc-redux
 
-#### api documentation for  [redux (v3.6.0)](http://redux.js.org)  [![npm package](https://img.shields.io/npm/v/npmdoc-redux.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-redux) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-redux.svg)](https://travis-ci.org/npmdoc/node-npmdoc-redux)
+#### basic api documentation for  [redux (v3.6.0)](http://redux.js.org)  [![npm package](https://img.shields.io/npm/v/npmdoc-redux.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-redux) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-redux.svg)](https://travis-ci.org/npmdoc/node-npmdoc-redux)
 
 #### Predictable state container for JavaScript apps
 
@@ -165,7 +165,8 @@
         "test:watch": "npm test -- --watch"
     },
     "typings": "./index.d.ts",
-    "version": "3.6.0"
+    "version": "3.6.0",
+    "bin": {}
 }
 ```
 
