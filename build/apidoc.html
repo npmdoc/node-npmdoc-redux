@@ -112,6 +112,12 @@
 
         </li>
 
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux.</span>warning</span>
+
+        </li>
+
     </ol></li>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.redux.applyMiddleware">module redux.applyMiddleware</a><ol>
@@ -210,6 +216,25 @@
         <li>
 
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux.createStore.</span>ActionTypes</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux.warning">module redux.warning</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux.warning.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux.warning.default">
+            function <span class="apidocSignatureSpan">redux.warning.</span>default
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
 
         </li>
 
@@ -525,6 +550,8 @@ typeof actionCreators) + &#x27;. &#x27; + &#x27;Did you write &#x22;import Actio
    */ ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
+
+
 
 
 </div>
@@ -867,6 +894,40 @@ typeof actionCreators) + &#x27;. &#x27; + &#x27;Did you write &#x22;import Actio
     </ul>
 
 
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux.warning" id="apidoc.module.redux.warning">module redux.warning</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux.warning.default" id="apidoc.element.redux.warning.default">
+        function <span class="apidocSignatureSpan">redux.warning.</span>default
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function warning(message) {
+<span class="apidocCodeCommentSpan">  /* eslint-disable no-console */
+</span>  if (typeof console !== &#x27;undefined&#x27; &#x26;&#x26; typeof console.error === &#x27;function&#x27;) {
+    console.error(message);
+  }
+  /* eslint-enable no-console */
+  try {
+    // This error was thrown as a convenience so that if you enable
+    // &#x22;break on all exceptions&#x22; in your console,
+    // it would pause the execution at this line.
+    throw new Error(message);
+    /* eslint-disable no-empty */
+  } catch (e) {}
+  /* eslint-enable no-empty */
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
 
 
 </div>
