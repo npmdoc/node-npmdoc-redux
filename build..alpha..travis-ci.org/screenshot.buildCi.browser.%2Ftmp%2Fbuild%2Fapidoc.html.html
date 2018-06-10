@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -48,17 +48,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="http://redux.js.org"
-
-    >redux (4.0.0)</a>
+    <a href="http://redux.js.org">redux (4.0.0)</a>
 </h1>
 <h4>Predictable state container for JavaScript apps</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.redux">module redux</a><ol>
 
@@ -141,8 +134,8 @@
 
       var store = createStore.apply(undefined, args);
       var _dispatch = function dispatch() {
-        throw new Error(&apos;Dispatching while constructing your middleware is not allowed. &apos; + &apos;Other middleware would not be applied
- to this dispatch.&apos;);
+        throw new Error('Dispatching while constructing your middleware is not allowed. ' + 'Other middleware would not be applied
+ to this dispatch.');
       };
 
       var middlewareAPI = {
@@ -175,14 +168,14 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function bindActionCreators(actionCreators, dispatch) {
-  if (typeof actionCreators === &apos;function&apos;) {
+  if (typeof actionCreators === 'function') {
     return bindActionCreator(actionCreators, dispatch);
   }
 
-  if ((typeof actionCreators === &apos;undefined&apos; ? &apos;undefined&apos; : _typeof(actionCreators)) !== &apos;object&apos; || actionCreators === null) {
-    throw new Error(&apos;bindActionCreators expected an object or a function, instead received &apos; + (actionCreators === null ? &apos;null&apos; :
-typeof actionCreators === &apos;undefined&apos; ? &apos;undefined&apos; : _typeof(actionCreators)) + &apos;. &apos; + &apos;Did you write &quot;import ActionCreators from
-&quot; instead of &quot;import * as ActionCreators from&quot;?&apos;);
+  if ((typeof actionCreators === 'undefined' ? 'undefined' : _typeof(actionCreators)) !== 'object' || actionCreators === null) {
+    throw new Error('bindActionCreators expected an object or a function, instead received ' + (actionCreators === null ? 'null' :
+typeof actionCreators === 'undefined' ? 'undefined' : _typeof(actionCreators)) + '. ' + 'Did you write "import ActionCreators from
+" instead of "import * as ActionCreators from"?');
   }
 
   var keys = Object.keys(actionCreators);
@@ -190,7 +183,7 @@ typeof actionCreators === &apos;undefined&apos; ? &apos;undefined&apos; : _typeo
   for (var i = 0; i &lt; keys.length; i++) {
     var key = keys[i];
     var actionCreator = actionCreators[key];
-    if (typeof actionCreator === &apos;function&apos;) {
+    if (typeof actionCreator === 'function') {
       boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);
     }
   }
@@ -214,20 +207,20 @@ typeof actionCreators === &apos;undefined&apos; ? &apos;undefined&apos; : _typeo
   for (var i = 0; i &lt; reducerKeys.length; i++) {
     var key = reducerKeys[i];
 
-    if (process.env.NODE_ENV !== &apos;production&apos;) {
-      if (typeof reducers[key] === &apos;undefined&apos;) {
-        warning(&apos;No reducer provided for key &quot;&apos; + key + &apos;&quot;&apos;);
+    if (process.env.NODE_ENV !== 'production') {
+      if (typeof reducers[key] === 'undefined') {
+        warning('No reducer provided for key "' + key + '"');
       }
     }
 
-    if (typeof reducers[key] === &apos;function&apos;) {
+    if (typeof reducers[key] === 'function') {
       finalReducers[key] = reducers[key];
     }
   }
   var finalReducerKeys = Object.keys(finalReducers);
 
   var unexpectedKeyCache = void 0;
-  if (process.env.NODE_ENV !== &apos;production&apos;) {
+  if (process.env.NODE_ENV !== 'production') {
     unexpectedKeyCache = {};
   }
 
@@ -246,7 +239,7 @@ typeof actionCreators === &apos;undefined&apos; ? &apos;undefined&apos; : _typeo
       throw shapeAssertionError;
     }
 
-    if (process.env.NODE_ENV !== &apos;production&apos;) {
+    if (process.env.NODE_ENV !== 'production') {
       var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
       if (warningMessage) {
         warning(warningMessage);
@@ -260,7 +253,7 @@ typeof actionCreators === &apos;undefined&apos; ? &apos;undefined&apos; : _typeo
       var reducer = finalReducers[_key];
       var previousStateForKey = state[_key];
       var nextStateForKey = reducer(previousStateForKey, action);
-      if (typeof nextStateForKey === &apos;undefined&apos;) {
+      if (typeof nextStateForKey === 'undefined') {
         var errorMessage = getUndefinedStateErrorMessage(_key, action);
         throw new Error(errorMessage);
       }
@@ -318,21 +311,21 @@ typeof actionCreators === &apos;undefined&apos; ? &apos;undefined&apos; : _typeo
     <li>description and source-code<pre class="apidocCodePre">function createStore(reducer, preloadedState, enhancer) {
   var _ref2;
 
-  if (typeof preloadedState === &apos;function&apos; &amp;&amp; typeof enhancer === &apos;undefined&apos;) {
+  if (typeof preloadedState === 'function' &amp;&amp; typeof enhancer === 'undefined') {
     enhancer = preloadedState;
     preloadedState = undefined;
   }
 
-  if (typeof enhancer !== &apos;undefined&apos;) {
-    if (typeof enhancer !== &apos;function&apos;) {
-      throw new Error(&apos;Expected the enhancer to be a function.&apos;);
+  if (typeof enhancer !== 'undefined') {
+    if (typeof enhancer !== 'function') {
+      throw new Error('Expected the enhancer to be a function.');
     }
 
     return enhancer(createStore)(reducer, preloadedState);
   }
 
-  if (typeof reducer !== &apos;function&apos;) {
-    throw new Error(&apos;Expected the reducer to be a function.&apos;);
+  if (typeof reducer !== 'function') {
+    throw new Error('Expected the reducer to be a function.');
   }
 
   var currentReducer = reducer;
@@ -354,8 +347,8 @@ typeof actionCreators === &apos;undefined&apos; ? &apos;undefined&apos; : _typeo
    */
 </span>  function getState() {
     if (isDispatching) {
-      throw new Error(&apos;You may not call store.getState() while the reducer is executing. &apos; + &apos;The reducer has already received the
- state as an argument. &apos; + &apos;Pass it down from the top reducer instead of reading it from the store.&apos;);
+      throw new Error('You may not call store.getState() while the reducer is executing. ' + 'The reducer has already received the
+ state as an argument. ' + 'Pass it down from the top reducer instead of reading it from the store.');
     }
 
     return currentState;
@@ -385,14 +378,14 @@ typeof actionCreators === &apos;undefined&apos; ? &apos;undefined&apos; : _typeo
    * @returns {Function} A function to remove this change listener.
    */
   function subscribe(listener) {
-    if (typeof listener !== &apos;function&apos;) {
-      throw new Error(&apos;Expected the listener to be a function.&apos;);
+    if (typeof listener !== 'function') {
+      throw new Error('Expected the listener to be a function.');
     }
 
     if (isDispatching) {
-      throw new Error(&apos;You may not call store.subscribe() while the reducer is executing. &apos; + &apos;If you would like to be notified
-after the store has been updated, subscribe from a &apos; + &apos;component and invoke store.getState() in the callback to access the latest
- state. &apos; + &apos;See https://redux.js.org/api-reference/store#subscribe(listener) for more details.&apos;);
+      throw new Error('You may not call store.subscribe() while the reducer is executing. ' + 'If you would like to be notified
+after the store has been updated, subscribe from a ' + 'component and invoke store.getState() in the callback to access the latest
+ state. ' + 'See https://redux.js.org/api-reference/store#subscribe(listener) for more details.');
     }
 
     var isSubscribed = true;
@@ -406,8 +399,8 @@ after the store has been updated, subscribe from a &apos; + &apos;component and 
       }
 
       if (isDispatching) {
-        throw new Error(&apos;You may not unsubscribe from a store listener while the reducer is executing. &apos; + &apos;See https://redux.js
-.org/api-reference/store#subscribe(listener) for more details.&apos;);
+        throw new Error('You may not unsubscribe from a store listener while the reducer is executing. ' + 'See https://redux.js
+.org/api-reference/store#subscribe(listener) for more details.');
       }
 
       isSubscribed = false;
@@ -437,3 +430,4 @@ after the store has been updated, subscribe from a &apos; + &apos;component and 
     ]
 </div>
 </div>
+</body></html>

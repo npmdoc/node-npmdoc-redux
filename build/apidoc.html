@@ -27,6 +27,7 @@
     background: #eef;
     border: 1px solid;
     color: #777;
+    overflow-wrap: break-word;
     padding: 5px;
     white-space: pre-wrap;
 }
@@ -51,7 +52,7 @@
 
         href="http://redux.js.org"
 
-    >redux (v3.6.0)</a>
+    >redux (4.0.0)</a>
 </h1>
 <h4>Predictable state container for JavaScript apps</h4>
 <div class="apidocSectionDiv"><a
@@ -60,12 +61,6 @@
 ><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.redux">module redux</a><ol>
-
-        <li>
-
-            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux.</span>__esModule</span>
-
-        </li>
 
         <li>
 
@@ -114,127 +109,7 @@
 
         <li>
 
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux.</span>warning</span>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.redux.applyMiddleware">module redux.applyMiddleware</a><ol>
-
-        <li>
-
-            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux.applyMiddleware.</span>__esModule</span>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.redux.applyMiddleware.default">
-            function <span class="apidocSignatureSpan">redux.applyMiddleware.</span>default
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.redux.bindActionCreators">module redux.bindActionCreators</a><ol>
-
-        <li>
-
-            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux.bindActionCreators.</span>__esModule</span>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.redux.bindActionCreators.default">
-            function <span class="apidocSignatureSpan">redux.bindActionCreators.</span>default
-            <span class="apidocSignatureSpan">(actionCreators, dispatch)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.redux.combineReducers">module redux.combineReducers</a><ol>
-
-        <li>
-
-            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux.combineReducers.</span>__esModule</span>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.redux.combineReducers.default">
-            function <span class="apidocSignatureSpan">redux.combineReducers.</span>default
-            <span class="apidocSignatureSpan">(reducers)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.redux.compose">module redux.compose</a><ol>
-
-        <li>
-
-            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux.compose.</span>__esModule</span>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.redux.compose.default">
-            function <span class="apidocSignatureSpan">redux.compose.</span>default
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.redux.createStore">module redux.createStore</a><ol>
-
-        <li>
-
-            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux.createStore.</span>__esModule</span>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.redux.createStore.default">
-            function <span class="apidocSignatureSpan">redux.createStore.</span>default
-            <span class="apidocSignatureSpan">(reducer, preloadedState, enhancer)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux.createStore.</span>ActionTypes</span>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.redux.warning">module redux.warning</a><ol>
-
-        <li>
-
-            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux.warning.</span>__esModule</span>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.redux.warning.default">
-            function <span class="apidocSignatureSpan">redux.warning.</span>default
-            <span class="apidocSignatureSpan">(message)</span>
-            </a>
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux.</span>__DO_NOT_USE__ActionTypes</span>
 
         </li>
 
@@ -246,8 +121,6 @@
 <h1><a href="#apidoc.module.redux" id="apidoc.module.redux">module redux</a></h1>
 
 
-
-
     <h2>
         <a href="#apidoc.element.redux.applyMiddleware" id="apidoc.element.redux.applyMiddleware">
         function <span class="apidocSignatureSpan">redux.</span>applyMiddleware
@@ -256,26 +129,32 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function applyMiddleware() {
-  for (var _len = arguments.length, middlewares = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+  for (var _len = arguments.length, middlewares = Array(_len), _key = 0; _key &lt; _len; _key++) {
     middlewares[_key] = arguments[_key];
   }
 
   return function (createStore) {
-    return function (reducer, preloadedState, enhancer) {
-      var store = createStore(reducer, preloadedState, enhancer);
-      var _dispatch = store.dispatch;
-      var chain = [];
+    return function () {
+      for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 &lt; _len2; _key2++) {
+        args[_key2] = arguments[_key2];
+      }
+
+      var store = createStore.apply(undefined, args);
+      var _dispatch = function dispatch() {
+        throw new Error(&apos;Dispatching while constructing your middleware is not allowed. &apos; + &apos;Other middleware would not be applied
+ to this dispatch.&apos;);
+      };
 
       var middlewareAPI = {
         getState: store.getState,
-        dispatch: function dispatch(action) {
-          return _dispatch(action);
+        dispatch: function dispatch() {
+          return _dispatch.apply(undefined, arguments);
         }
       };
-      chain = middlewares.map(function (middleware) {
+      var chain = middlewares.map(function (middleware) {
         return middleware(middlewareAPI);
       });
-      _dispatch = _compose2[&#x27;default&#x27;].apply(undefined, chain)(store.dispatch);
+      _dispatch = compose.apply(undefined, chain)(store.dispatch);
 
       return _extends({}, store, {
         dispatch: _dispatch
@@ -296,21 +175,22 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function bindActionCreators(actionCreators, dispatch) {
-  if (typeof actionCreators === &#x27;function&#x27;) {
+  if (typeof actionCreators === &apos;function&apos;) {
     return bindActionCreator(actionCreators, dispatch);
   }
 
-  if (typeof actionCreators !== &#x27;object&#x27; || actionCreators === null) {
-    throw new Error(&#x27;bindActionCreators expected an object or a function, instead received &#x27; + (actionCreators === null ? &#x27;null&#x27; :
-typeof actionCreators) + &#x27;. &#x27; + &#x27;Did you write &#x22;import ActionCreators from&#x22; instead of &#x22;import * as ActionCreators from&#x22;?&#x27;);
+  if ((typeof actionCreators === &apos;undefined&apos; ? &apos;undefined&apos; : _typeof(actionCreators)) !== &apos;object&apos; || actionCreators === null) {
+    throw new Error(&apos;bindActionCreators expected an object or a function, instead received &apos; + (actionCreators === null ? &apos;null&apos; :
+typeof actionCreators === &apos;undefined&apos; ? &apos;undefined&apos; : _typeof(actionCreators)) + &apos;. &apos; + &apos;Did you write &quot;import ActionCreators from
+&quot; instead of &quot;import * as ActionCreators from&quot;?&apos;);
   }
 
   var keys = Object.keys(actionCreators);
   var boundActionCreators = {};
-  for (var i = 0; i &#x3c; keys.length; i++) {
+  for (var i = 0; i &lt; keys.length; i++) {
     var key = keys[i];
     var actionCreator = actionCreators[key];
-    if (typeof actionCreator === &#x27;function&#x27;) {
+    if (typeof actionCreator === &apos;function&apos;) {
       boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);
     }
   }
@@ -331,59 +211,60 @@ typeof actionCreators) + &#x27;. &#x27; + &#x27;Did you write &#x22;import Actio
     <li>description and source-code<pre class="apidocCodePre">function combineReducers(reducers) {
   var reducerKeys = Object.keys(reducers);
   var finalReducers = {};
-  for (var i = 0; i &#x3c; reducerKeys.length; i++) {
+  for (var i = 0; i &lt; reducerKeys.length; i++) {
     var key = reducerKeys[i];
 
-    if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-      if (typeof reducers[key] === &#x27;undefined&#x27;) {
-        (0, _warning2[&#x27;default&#x27;])(&#x27;No reducer provided for key &#x22;&#x27; + key + &#x27;&#x22;&#x27;);
+    if (process.env.NODE_ENV !== &apos;production&apos;) {
+      if (typeof reducers[key] === &apos;undefined&apos;) {
+        warning(&apos;No reducer provided for key &quot;&apos; + key + &apos;&quot;&apos;);
       }
     }
 
-    if (typeof reducers[key] === &#x27;function&#x27;) {
+    if (typeof reducers[key] === &apos;function&apos;) {
       finalReducers[key] = reducers[key];
     }
   }
   var finalReducerKeys = Object.keys(finalReducers);
 
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    var unexpectedKeyCache = {};
+  var unexpectedKeyCache = void 0;
+  if (process.env.NODE_ENV !== &apos;production&apos;) {
+    unexpectedKeyCache = {};
   }
 
-  var sanityError;
+  var shapeAssertionError = void 0;
   try {
-    assertReducerSanity(finalReducers);
+    assertReducerShape(finalReducers);
   } catch (e) {
-    sanityError = e;
+    shapeAssertionError = e;
   }
 
   return function combination() {
-    var state = arguments.length &#x3c;= 0 || arguments[0] === undefined ? {} : arguments[0];
+    var state = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {};
     var action = arguments[1];
 
-    if (sanityError) {
-      throw sanityError;
+    if (shapeAssertionError) {
+      throw shapeAssertionError;
     }
 
-    if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    if (process.env.NODE_ENV !== &apos;production&apos;) {
       var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
       if (warningMessage) {
-        (0, _warning2[&#x27;default&#x27;])(warningMessage);
+        warning(warningMessage);
       }
     }
 
     var hasChanged = false;
     var nextState = {};
-    for (var i = 0; i &#x3c; finalReducerKeys.length; i++) {
-      var key = finalReducerKeys[i];
-      var reducer = finalReducers[key];
-      var previousStateForKey = state[key];
+    for (var _i = 0; _i &lt; finalReducerKeys.length; _i++) {
+      var _key = finalReducerKeys[_i];
+      var reducer = finalReducers[_key];
+      var previousStateForKey = state[_key];
       var nextStateForKey = reducer(previousStateForKey, action);
-      if (typeof nextStateForKey === &#x27;undefined&#x27;) {
-        var errorMessage = getUndefinedStateErrorMessage(key, action);
+      if (typeof nextStateForKey === &apos;undefined&apos;) {
+        var errorMessage = getUndefinedStateErrorMessage(_key, action);
         throw new Error(errorMessage);
       }
-      nextState[key] = nextStateForKey;
+      nextState[_key] = nextStateForKey;
       hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
     }
     return hasChanged ? nextState : state;
@@ -402,7 +283,7 @@ typeof actionCreators) + &#x27;. &#x27; + &#x27;Did you write &#x22;import Actio
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function compose() {
-  for (var _len = arguments.length, funcs = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+  for (var _len = arguments.length, funcs = Array(_len), _key = 0; _key &lt; _len; _key++) {
     funcs[_key] = arguments[_key];
   }
 
@@ -416,13 +297,11 @@ typeof actionCreators) + &#x27;. &#x27; + &#x27;Did you write &#x22;import Actio
     return funcs[0];
   }
 
-  var last = funcs[funcs.length - 1];
-  var rest = funcs.slice(0, -1);
-  return function () {
-    return rest.reduceRight(function (composed, f) {
-      return f(composed);
-    }, last.apply(undefined, arguments));
-  };
+  return funcs.reduce(function (a, b) {
+    return function () {
+      return a(b.apply(undefined, arguments));
+    };
+  });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -439,21 +318,21 @@ typeof actionCreators) + &#x27;. &#x27; + &#x27;Did you write &#x22;import Actio
     <li>description and source-code<pre class="apidocCodePre">function createStore(reducer, preloadedState, enhancer) {
   var _ref2;
 
-  if (typeof preloadedState === &#x27;function&#x27; &#x26;&#x26; typeof enhancer === &#x27;undefined&#x27;) {
+  if (typeof preloadedState === &apos;function&apos; &amp;&amp; typeof enhancer === &apos;undefined&apos;) {
     enhancer = preloadedState;
     preloadedState = undefined;
   }
 
-  if (typeof enhancer !== &#x27;undefined&#x27;) {
-    if (typeof enhancer !== &#x27;function&#x27;) {
-      throw new Error(&#x27;Expected the enhancer to be a function.&#x27;);
+  if (typeof enhancer !== &apos;undefined&apos;) {
+    if (typeof enhancer !== &apos;function&apos;) {
+      throw new Error(&apos;Expected the enhancer to be a function.&apos;);
     }
 
     return enhancer(createStore)(reducer, preloadedState);
   }
 
-  if (typeof reducer !== &#x27;function&#x27;) {
-    throw new Error(&#x27;Expected the reducer to be a function.&#x27;);
+  if (typeof reducer !== &apos;function&apos;) {
+    throw new Error(&apos;Expected the reducer to be a function.&apos;);
   }
 
   var currentReducer = reducer;
@@ -474,6 +353,11 @@ typeof actionCreators) + &#x27;. &#x27; + &#x27;Did you write &#x22;import Actio
    * @returns {any} The current state tree of your application.
    */
 </span>  function getState() {
+    if (isDispatching) {
+      throw new Error(&apos;You may not call store.getState() while the reducer is executing. &apos; + &apos;The reducer has already received the
+ state as an argument. &apos; + &apos;Pass it down from the top reducer instead of reading it from the store.&apos;);
+    }
+
     return currentState;
   }
 
@@ -501,8 +385,14 @@ typeof actionCreators) + &#x27;. &#x27; + &#x27;Did you write &#x22;import Actio
    * @returns {Function} A function to remove this change listener.
    */
   function subscribe(listener) {
-    if (typeof listener !== &#x27;function&#x27;) {
-      throw new Error(&#x27;Expected listener to be a function.&#x27;);
+    if (typeof listener !== &apos;function&apos;) {
+      throw new Error(&apos;Expected the listener to be a function.&apos;);
+    }
+
+    if (isDispatching) {
+      throw new Error(&apos;You may not call store.subscribe() while the reducer is executing. &apos; + &apos;If you would like to be notified
+after the store has been updated, subscribe from a &apos; + &apos;component and invoke store.getState() in the callback to access the latest
+ state. &apos; + &apos;See https://redux.js.org/api-reference/store#subscribe(listener) for more details.&apos;);
     }
 
     var isSubscribed = true;
@@ -513,6 +403,11 @@ typeof actionCreators) + &#x27;. &#x27; + &#x27;Did you write &#x22;import Actio
     return function unsubscribe() {
       if (!isSubscribed) {
         return;
+      }
+
+      if (isDispatching) {
+        throw new Error(&apos;You may not unsubscribe from a store listener while the reducer is executing. &apos; + &apos;See https://redux.js
+.org/api-reference/store#subscribe(listener) for more details.&apos;);
       }
 
       isSubscribed = false;
@@ -527,407 +422,11 @@ typeof actionCreators) + &#x27;. &#x27; + &#x27;Did you write &#x22;import Actio
    * Dispatches an action. It is the only way to trigger a state change.
    *
    * The `reducer` function, used to create the store, will be called with the
-   * current state tree and the given `action`. Its return value will
-   * be considered the **next** state of the tree, and the change listeners
-   * will be notified.
-   *
-   * The base implementation only supports plain object actions. If you want to
-   * dispatch a Promise, an Observable, a thunk, or something else, you need to
-   * wrap your store creating function into the corresponding middleware. For
-   * example, see the documentation for the `redux-thunk` package. Even the
-   * middleware will eventually dispatch plain object actions using this method.
-   *
-   * @param {Object} action A plain object representing “what changed”. It is
-   * a good idea to keep actions serializable so you can record and replay user
-   * sessions, or use the time travelling `redux-devtools`. An action must have
-   * a `type` property which may not be `undefined`. It is a good idea to use
-   * string constants for action types.
-   *
-   * @returns {Object} For convenience, the same action object you dispatched.
-   *
-   * Note that, if you use a custom middleware, it may wrap `dispatch()` to
-   * return something else (for example, a Promise you can await).
-   */ ...</pre></li>
+   * current state tree and the given `act...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.redux.applyMiddleware" id="apidoc.module.redux.applyMiddleware">module redux.applyMiddleware</a></h1>
-
-
-
-
-    <h2>
-        <a href="#apidoc.element.redux.applyMiddleware.default" id="apidoc.element.redux.applyMiddleware.default">
-        function <span class="apidocSignatureSpan">redux.applyMiddleware.</span>default
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function applyMiddleware() {
-  for (var _len = arguments.length, middlewares = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
-    middlewares[_key] = arguments[_key];
-  }
-
-  return function (createStore) {
-    return function (reducer, preloadedState, enhancer) {
-      var store = createStore(reducer, preloadedState, enhancer);
-      var _dispatch = store.dispatch;
-      var chain = [];
-
-      var middlewareAPI = {
-        getState: store.getState,
-        dispatch: function dispatch(action) {
-          return _dispatch(action);
-        }
-      };
-      chain = middlewares.map(function (middleware) {
-        return middleware(middlewareAPI);
-      });
-      _dispatch = _compose2[&#x27;default&#x27;].apply(undefined, chain)(store.dispatch);
-
-      return _extends({}, store, {
-        dispatch: _dispatch
-      });
-    };
-  };
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.redux.bindActionCreators" id="apidoc.module.redux.bindActionCreators">module redux.bindActionCreators</a></h1>
-
-
-
-
-    <h2>
-        <a href="#apidoc.element.redux.bindActionCreators.default" id="apidoc.element.redux.bindActionCreators.default">
-        function <span class="apidocSignatureSpan">redux.bindActionCreators.</span>default
-        <span class="apidocSignatureSpan">(actionCreators, dispatch)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function bindActionCreators(actionCreators, dispatch) {
-  if (typeof actionCreators === &#x27;function&#x27;) {
-    return bindActionCreator(actionCreators, dispatch);
-  }
-
-  if (typeof actionCreators !== &#x27;object&#x27; || actionCreators === null) {
-    throw new Error(&#x27;bindActionCreators expected an object or a function, instead received &#x27; + (actionCreators === null ? &#x27;null&#x27; :
-typeof actionCreators) + &#x27;. &#x27; + &#x27;Did you write &#x22;import ActionCreators from&#x22; instead of &#x22;import * as ActionCreators from&#x22;?&#x27;);
-  }
-
-  var keys = Object.keys(actionCreators);
-  var boundActionCreators = {};
-  for (var i = 0; i &#x3c; keys.length; i++) {
-    var key = keys[i];
-    var actionCreator = actionCreators[key];
-    if (typeof actionCreator === &#x27;function&#x27;) {
-      boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);
-    }
-  }
-  return boundActionCreators;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.redux.combineReducers" id="apidoc.module.redux.combineReducers">module redux.combineReducers</a></h1>
-
-
-
-
-    <h2>
-        <a href="#apidoc.element.redux.combineReducers.default" id="apidoc.element.redux.combineReducers.default">
-        function <span class="apidocSignatureSpan">redux.combineReducers.</span>default
-        <span class="apidocSignatureSpan">(reducers)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function combineReducers(reducers) {
-  var reducerKeys = Object.keys(reducers);
-  var finalReducers = {};
-  for (var i = 0; i &#x3c; reducerKeys.length; i++) {
-    var key = reducerKeys[i];
-
-    if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-      if (typeof reducers[key] === &#x27;undefined&#x27;) {
-        (0, _warning2[&#x27;default&#x27;])(&#x27;No reducer provided for key &#x22;&#x27; + key + &#x27;&#x22;&#x27;);
-      }
-    }
-
-    if (typeof reducers[key] === &#x27;function&#x27;) {
-      finalReducers[key] = reducers[key];
-    }
-  }
-  var finalReducerKeys = Object.keys(finalReducers);
-
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-    var unexpectedKeyCache = {};
-  }
-
-  var sanityError;
-  try {
-    assertReducerSanity(finalReducers);
-  } catch (e) {
-    sanityError = e;
-  }
-
-  return function combination() {
-    var state = arguments.length &#x3c;= 0 || arguments[0] === undefined ? {} : arguments[0];
-    var action = arguments[1];
-
-    if (sanityError) {
-      throw sanityError;
-    }
-
-    if (process.env.NODE_ENV !== &#x27;production&#x27;) {
-      var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
-      if (warningMessage) {
-        (0, _warning2[&#x27;default&#x27;])(warningMessage);
-      }
-    }
-
-    var hasChanged = false;
-    var nextState = {};
-    for (var i = 0; i &#x3c; finalReducerKeys.length; i++) {
-      var key = finalReducerKeys[i];
-      var reducer = finalReducers[key];
-      var previousStateForKey = state[key];
-      var nextStateForKey = reducer(previousStateForKey, action);
-      if (typeof nextStateForKey === &#x27;undefined&#x27;) {
-        var errorMessage = getUndefinedStateErrorMessage(key, action);
-        throw new Error(errorMessage);
-      }
-      nextState[key] = nextStateForKey;
-      hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
-    }
-    return hasChanged ? nextState : state;
-  };
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.redux.compose" id="apidoc.module.redux.compose">module redux.compose</a></h1>
-
-
-
-
-    <h2>
-        <a href="#apidoc.element.redux.compose.default" id="apidoc.element.redux.compose.default">
-        function <span class="apidocSignatureSpan">redux.compose.</span>default
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function compose() {
-  for (var _len = arguments.length, funcs = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
-    funcs[_key] = arguments[_key];
-  }
-
-  if (funcs.length === 0) {
-    return function (arg) {
-      return arg;
-    };
-  }
-
-  if (funcs.length === 1) {
-    return funcs[0];
-  }
-
-  var last = funcs[funcs.length - 1];
-  var rest = funcs.slice(0, -1);
-  return function () {
-    return rest.reduceRight(function (composed, f) {
-      return f(composed);
-    }, last.apply(undefined, arguments));
-  };
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.redux.createStore" id="apidoc.module.redux.createStore">module redux.createStore</a></h1>
-
-
-
-
-    <h2>
-        <a href="#apidoc.element.redux.createStore.default" id="apidoc.element.redux.createStore.default">
-        function <span class="apidocSignatureSpan">redux.createStore.</span>default
-        <span class="apidocSignatureSpan">(reducer, preloadedState, enhancer)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function createStore(reducer, preloadedState, enhancer) {
-  var _ref2;
-
-  if (typeof preloadedState === &#x27;function&#x27; &#x26;&#x26; typeof enhancer === &#x27;undefined&#x27;) {
-    enhancer = preloadedState;
-    preloadedState = undefined;
-  }
-
-  if (typeof enhancer !== &#x27;undefined&#x27;) {
-    if (typeof enhancer !== &#x27;function&#x27;) {
-      throw new Error(&#x27;Expected the enhancer to be a function.&#x27;);
-    }
-
-    return enhancer(createStore)(reducer, preloadedState);
-  }
-
-  if (typeof reducer !== &#x27;function&#x27;) {
-    throw new Error(&#x27;Expected the reducer to be a function.&#x27;);
-  }
-
-  var currentReducer = reducer;
-  var currentState = preloadedState;
-  var currentListeners = [];
-  var nextListeners = currentListeners;
-  var isDispatching = false;
-
-  function ensureCanMutateNextListeners() {
-    if (nextListeners === currentListeners) {
-      nextListeners = currentListeners.slice();
-    }
-  }
-
-<span class="apidocCodeCommentSpan">  /**
-   * Reads the state tree managed by the store.
-   *
-   * @returns {any} The current state tree of your application.
-   */
-</span>  function getState() {
-    return currentState;
-  }
-
-  /**
-   * Adds a change listener. It will be called any time an action is dispatched,
-   * and some part of the state tree may potentially have changed. You may then
-   * call `getState()` to read the current state tree inside the callback.
-   *
-   * You may call `dispatch()` from a change listener, with the following
-   * caveats:
-   *
-   * 1. The subscriptions are snapshotted just before every `dispatch()` call.
-   * If you subscribe or unsubscribe while the listeners are being invoked, this
-   * will not have any effect on the `dispatch()` that is currently in progress.
-   * However, the next `dispatch()` call, whether nested or not, will use a more
-   * recent snapshot of the subscription list.
-   *
-   * 2. The listener should not expect to see all state changes, as the state
-   * might have been updated multiple times during a nested `dispatch()` before
-   * the listener is called. It is, however, guaranteed that all subscribers
-   * registered before the `dispatch()` started will be called with the latest
-   * state by the time it exits.
-   *
-   * @param {Function} listener A callback to be invoked on every dispatch.
-   * @returns {Function} A function to remove this change listener.
-   */
-  function subscribe(listener) {
-    if (typeof listener !== &#x27;function&#x27;) {
-      throw new Error(&#x27;Expected listener to be a function.&#x27;);
-    }
-
-    var isSubscribed = true;
-
-    ensureCanMutateNextListeners();
-    nextListeners.push(listener);
-
-    return function unsubscribe() {
-      if (!isSubscribed) {
-        return;
-      }
-
-      isSubscribed = false;
-
-      ensureCanMutateNextListeners();
-      var index = nextListeners.indexOf(listener);
-      nextListeners.splice(index, 1);
-    };
-  }
-
-  /**
-   * Dispatches an action. It is the only way to trigger a state change.
-   *
-   * The `reducer` function, used to create the store, will be called with the
-   * current state tree and the given `action`. Its return value will
-   * be considered the **next** state of the tree, and the change listeners
-   * will be notified.
-   *
-   * The base implementation only supports plain object actions. If you want to
-   * dispatch a Promise, an Observable, a thunk, or something else, you need to
-   * wrap your store creating function into the corresponding middleware. For
-   * example, see the documentation for the `redux-thunk` package. Even the
-   * middleware will eventually dispatch plain object actions using this method.
-   *
-   * @param {Object} action A plain object representing “what changed”. It is
-   * a good idea to keep actions serializable so you can record and replay user
-   * sessions, or use the time travelling `redux-devtools`. An action must have
-   * a `type` property which may not be `undefined`. It is a good idea to use
-   * string constants for action types.
-   *
-   * @returns {Object} For convenience, the same action object you dispatched.
-   *
-   * Note that, if you use a custom middleware, it may wrap `dispatch()` to
-   * return something else (for example, a Promise you can await).
-   */ ...</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.redux.warning" id="apidoc.module.redux.warning">module redux.warning</a></h1>
-
-
-
-
-    <h2>
-        <a href="#apidoc.element.redux.warning.default" id="apidoc.element.redux.warning.default">
-        function <span class="apidocSignatureSpan">redux.warning.</span>default
-        <span class="apidocSignatureSpan">(message)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function warning(message) {
-<span class="apidocCodeCommentSpan">  /* eslint-disable no-console */
-</span>  if (typeof console !== &#x27;undefined&#x27; &#x26;&#x26; typeof console.error === &#x27;function&#x27;) {
-    console.error(message);
-  }
-  /* eslint-enable no-console */
-  try {
-    // This error was thrown as a convenience so that if you enable
-    // &#x22;break on all exceptions&#x22; in your console,
-    // it would pause the execution at this line.
-    throw new Error(message);
-    /* eslint-disable no-empty */
-  } catch (e) {}
-  /* eslint-enable no-empty */
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
 
 
 </div>
