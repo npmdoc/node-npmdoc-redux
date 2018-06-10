@@ -1,6 +1,6 @@
 # npmdoc-redux
 
-#### basic api documentation for  [redux (v3.6.0)](http://redux.js.org)  [![npm package](https://img.shields.io/npm/v/npmdoc-redux.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-redux) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-redux.svg)](https://travis-ci.org/npmdoc/node-npmdoc-redux)
+#### basic api documentation for  [redux (4.0.0)](http://redux.js.org)  [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-redux.svg)](https://travis-ci.org/npmdoc/node-npmdoc-redux)
 
 #### Predictable state container for JavaScript apps
 
@@ -8,11 +8,11 @@
 
 - [https://npmdoc.github.io/node-npmdoc-redux/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-redux/build/apidoc.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-redux/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-redux/build/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-redux/build/screenshot.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-redux/build/apidoc.html)
 
-![npmPackageListing](https://npmdoc.github.io/node-npmdoc-redux/build/screenCapture.npmPackageListing.svg)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-redux/build/screenshot.npmPackageListing.svg)
 
-![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-redux/build/screenCapture.npmPackageDependencyTree.svg)
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-redux/build/screenshot.npmPackageDependencyTree.svg)
 
 
 
@@ -34,59 +34,47 @@
         "url": "https://github.com/reactjs/redux/issues"
     },
     "dependencies": {
-        "lodash": "^4.2.1",
-        "lodash-es": "^4.2.1",
         "loose-envify": "^1.1.0",
-        "symbol-observable": "^1.0.2"
+        "symbol-observable": "^1.2.0"
     },
     "description": "Predictable state container for JavaScript apps",
     "devDependencies": {
-        "babel-cli": "^6.3.15",
-        "babel-core": "^6.3.15",
-        "babel-eslint": "^4.1.6",
-        "babel-loader": "^6.2.0",
-        "babel-plugin-check-es2015-constants": "^6.3.13",
-        "babel-plugin-transform-es2015-arrow-functions": "^6.3.13",
-        "babel-plugin-transform-es2015-block-scoped-functions": "^6.3.13",
-        "babel-plugin-transform-es2015-block-scoping": "^6.3.13",
-        "babel-plugin-transform-es2015-classes": "^6.3.13",
-        "babel-plugin-transform-es2015-computed-properties": "^6.3.13",
-        "babel-plugin-transform-es2015-destructuring": "^6.3.13",
-        "babel-plugin-transform-es2015-for-of": "^6.3.13",
-        "babel-plugin-transform-es2015-function-name": "^6.3.13",
-        "babel-plugin-transform-es2015-literals": "^6.3.13",
-        "babel-plugin-transform-es2015-modules-commonjs": "^6.3.13",
-        "babel-plugin-transform-es2015-object-super": "^6.3.13",
-        "babel-plugin-transform-es2015-parameters": "^6.3.13",
-        "babel-plugin-transform-es2015-shorthand-properties": "^6.3.13",
-        "babel-plugin-transform-es2015-spread": "^6.3.13",
-        "babel-plugin-transform-es2015-sticky-regex": "^6.3.13",
-        "babel-plugin-transform-es2015-template-literals": "^6.3.13",
-        "babel-plugin-transform-es2015-unicode-regex": "^6.3.13",
-        "babel-plugin-transform-es3-member-expression-literals": "^6.5.0",
-        "babel-plugin-transform-es3-property-literals": "^6.5.0",
-        "babel-plugin-transform-object-rest-spread": "^6.3.13",
-        "babel-register": "^6.3.13",
-        "check-es3-syntax-cli": "^0.1.1",
-        "cross-env": "^1.0.7",
-        "eslint": "^1.10.3",
-        "eslint-config-rackt": "^1.1.1",
-        "eslint-plugin-react": "^3.16.1",
-        "expect": "^1.8.0",
-        "gitbook-cli": "^2.3.0",
-        "glob": "^6.0.4",
-        "isparta": "^4.0.0",
-        "mocha": "^2.2.5",
-        "rimraf": "^2.3.4",
-        "rxjs": "^5.0.0-beta.6",
-        "typescript": "^1.8.0",
-        "typescript-definition-tester": "0.0.4",
-        "webpack": "^1.9.6"
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.0",
+        "babel-eslint": "^8.2.3",
+        "babel-jest": "^22.4.3",
+        "babel-plugin-external-helpers": "^6.22.0",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "babel-register": "^6.26.0",
+        "cross-env": "^5.1.4",
+        "eslint": "^4.19.1",
+        "eslint-config-react-app": "^2.1.0",
+        "eslint-plugin-flowtype": "^2.46.2",
+        "eslint-plugin-import": "^2.11.0",
+        "eslint-plugin-jsx-a11y": "^6.0.3",
+        "eslint-plugin-react": "^7.7.0",
+        "glob": "^7.1.1",
+        "jest": "^22.4.3",
+        "prettier": "^1.12.1",
+        "rimraf": "^2.6.2",
+        "rollup": "^0.58.0",
+        "rollup-plugin-babel": "^3.0.3",
+        "rollup-plugin-node-resolve": "^3.3.0",
+        "rollup-plugin-replace": "^2.0.0",
+        "rollup-plugin-uglify": "^3.0.0",
+        "rxjs": "^5.5.10",
+        "typescript": "^2.8.1",
+        "typings-tester": "^0.3.1"
     },
     "directories": {},
     "dist": {
-        "shasum": "887c2b3d0b9bd86eca2be70571c27654c19e188d",
-        "tarball": "https://registry.npmjs.org/redux/-/redux-3.6.0.tgz"
+        "integrity": "sha512-NnnHF0h0WVE/hXyrB6OlX67LYRuaf/rJcbWvnHHEPCF/Xa/AZpwhs/20WyqzQae5x4SD2F9nPObgBh2rxAgLiA==",
+        "shasum": "aa698a92b729315d22b34a0553d7e6533555cc03",
+        "tarball": "https://registry.npmjs.org/redux/-/redux-4.0.0.tgz",
+        "fileCount": 18,
+        "unpackedSize": 147490,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa1koWCRA9TVsSAnZWagAABvMP/iDDVvhi/YgHjHodWqC4\n0u1SXRAcSno2Kh1mD0E11K6duSKyVGrT/ZlVD888dDuuwoeFzfJNtCxEJ2ae\nTSvD88ODFNxhhd9+oAojeBh6uRZKpRJCzVrW4Xw1C97ioaZoz4QY493HfRvs\nCQSmsDAraqDI6VamuDqdvCDuADL+hCCIlCsR2aQiCwiJPx6nPjWSCBjdGsDw\nuxS+k7Ys+g3srZI2b1O7QIOWgmrfbO89B03mL1UXGJ70mS0e/7vkSC6+a9io\n0qdsXGNdhk2+5NNXhbzceaQ5K9eIZg1haH/s0NSZtk62ZqZ0kAsdjl1kLpcB\ncmyt20ZyRlnKTVhCL2R3XijB/djhVY6iRQMIC3bxjqu9DxOAm0gMiGd/sVJ5\n0SJuiYkE0rEpIVqBSQB3Rbki7+ril4JqF3e25zUNWR/soS73w4N17r0PbZOj\ny2r+NzzN3uwEV8Hj92KVQWg8sDuBnRAWwWTolEpeS3gbVuwttDUrdAF7lViY\nRmhDBoC4O+XBkVITCWwKxtfMVVeyVUCF+XruVihp6qcKwUNO7qivlMAOCUJr\nlc2+1NP7fUFmiWuLia/0vADQDwsV0R8//8PWQU2NX8UAAgDyLoBT9Thxxtxp\n94PbRaYcMADWw3MYnwmGXEUZpEv4B8DVTX84FUexOOo5isxGiHwXXf2nfoMQ\nV/+9\r\n=D3gG\r\n-----END PGP SIGNATURE-----\r\n"
     },
     "files": [
         "dist",
@@ -95,9 +83,11 @@
         "src",
         "index.d.ts"
     ],
-    "gitHead": "3e114f8c0fd4461e2f642c2737d2fa8297484728",
+    "gitHead": "e95eaf2dc2024fe99dc0f7334a8bd049b4949ed0",
     "homepage": "http://redux.js.org",
-    "jsnext:main": "es/index.js",
+    "jest": {
+        "testRegex": "(/test/.*\\.spec.js)$"
+    },
     "keywords": [
         "redux",
         "reducer",
@@ -112,7 +102,7 @@
         "elm"
     ],
     "license": "MIT",
-    "main": "lib/index.js",
+    "main": "lib/redux.js",
     "maintainers": [
         {
             "name": "acdlite"
@@ -124,7 +114,7 @@
             "name": "timdorr"
         }
     ],
-    "module": "es/index.js",
+    "module": "es/redux.js",
     "name": "redux",
     "npmFileMap": [
         {
@@ -142,30 +132,25 @@
     },
     "scripts": {
         "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
-        "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
-        "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
-        "build:examples": "cross-env BABEL_ENV=commonjs babel-node examples/buildAll.js",
-        "build:umd": "cross-env BABEL_ENV=commonjs NODE_ENV=development webpack src/index.js dist/redux.js",
-        "build:umd:min": "cross-env BABEL_ENV=commonjs NODE_ENV=production webpack src/index.js dist/redux.min.js",
-        "check:examples": "npm run build:examples && npm run lint:examples && npm run test:examples",
-        "check:src": "npm run lint:src && npm run test",
+        "build:commonjs": "cross-env NODE_ENV=cjs rollup -c -o lib/redux.js",
+        "build:es": "cross-env BABEL_ENV=es NODE_ENV=es rollup -c -o es/redux.js",
+        "build:umd": "cross-env BABEL_ENV=es NODE_ENV=development rollup -c -o dist/redux.js",
+        "build:umd:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup -c -o dist/redux.min.js",
         "clean": "rimraf lib dist es coverage",
-        "docs:build": "npm run docs:prepare && gitbook build -g reactjs/redux && cp logo/apple-touch-icon.png _book/gitbook/images/apple-touch-icon-precomposed-152.png && cp logo/favicon.ico _book/gitbook/images",
-        "docs:clean": "rimraf _book",
-        "docs:prepare": "gitbook install",
-        "docs:publish": "npm run docs:clean && npm run docs:build && cp CNAME _book && cd _book && git init && git commit --allow-empty -m 'update book' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:reactjs/redux gh-pages --force",
-        "docs:watch": "npm run docs:prepare && gitbook serve",
-        "lint": "npm run lint:src && npm run lint:examples",
-        "lint:examples": "eslint examples",
-        "lint:src": "eslint src test build",
-        "prepublish": "npm run clean && npm run check:src && npm run build && check-es3-syntax lib/ dist/ --kill --print",
-        "test": "cross-env BABEL_ENV=commonjs mocha --compilers js:babel-register --recursive",
-        "test:cov": "cross-env BABEL_ENV=commonjs babel-node $(npm bin)/isparta cover $(npm bin)/_mocha -- --recursive",
-        "test:examples": "cross-env BABEL_ENV=commonjs babel-node examples/testAll.js",
+        "examples:lint": "eslint examples",
+        "examples:test": "cross-env CI=true babel-node examples/testAll.js",
+        "format": "prettier --write \"{src,test}/**/*.js\"",
+        "format:check": "prettier --list-different \"{src,test}/**/*.js\"",
+        "lint": "eslint src test build",
+        "prepare": "npm run clean && npm run format:check && npm run lint && npm test && npm run build",
+        "pretest": "npm run build:commonjs",
+        "test": "cross-env BABEL_ENV=commonjs jest",
+        "test:cov": "npm test -- --coverage",
         "test:watch": "npm test -- --watch"
     },
+    "sideEffects": false,
     "typings": "./index.d.ts",
-    "version": "3.6.0",
+    "version": "4.0.0",
     "bin": {}
 }
 ```
